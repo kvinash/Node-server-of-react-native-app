@@ -8,15 +8,15 @@ let response = {
 }
 exports.login = (req, res, next) => {
  console.log("users1");
- console.log(req.body.name)
+ 
  if(req.body.name===''||req.body.password===''||req.body.password===undefined||req.body.name===undefined){
-    console.log("users2");
+    
      response.msg = "username or password must be defined";
       res.json(response);
  } else {
       user.find({ name: req.body.name }, function(err, users) {
        console.log("users3");
-      console.log(users);
+      
       
     if (err) {
       response.msg = err;
